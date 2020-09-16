@@ -651,7 +651,10 @@ glBegin(GL_QUADS);              // road component last 1
     glEnd();
 
 
-    // bus tyre
+     /**********************
+	* MD. TANJIMUL ISLAM
+	*  Bus1 tyre1
+	***********************/
 	glBegin(GL_TRIANGLE_FAN);
 	x=7.0f; y=-19.8f; radius1=0.85f;
 		glColor3ub(42, 55, 74);
@@ -665,7 +668,6 @@ glBegin(GL_QUADS);              // road component last 1
 	glEnd();
 
 
-    // bus tyre
 	glBegin(GL_TRIANGLE_FAN);
 	x=7.0f; y=-19.8f; radius1=0.45f;
 		glColor3ub(205, 204, 209);
@@ -683,7 +685,10 @@ glBegin(GL_QUADS);              // road component last 1
 
 
 
-
+    /**********************
+	* MD. TANJIMUL ISLAM
+	*  Bus1 tyre2
+	***********************/
 	glBegin(GL_TRIANGLE_FAN);
 	x=16.0f; y=-19.8f; radius1=0.85f;
 		glColor3ub(42, 55, 74);
@@ -714,6 +719,8 @@ glBegin(GL_QUADS);              // road component last 1
 
 
 
+
+
     /**********************
 	* MD. TANJIMUL ISLAM
 	*  Bus2 Body
@@ -725,6 +732,9 @@ glBegin(GL_QUADS);              // road component last 1
     glVertex2f(-10.0f, -24.0f);
 	glVertex2f(-24.0f, -24.0f);
 	glEnd();
+
+
+
 
 
 
@@ -752,6 +762,23 @@ glBegin(GL_QUADS);              // road component last 1
 
     /**********************
 	* MD. TANJIMUL ISLAM
+	*  bus2 head light
+	***********************/
+    glLineWidth(5.00);
+    glBegin(GL_LINES);
+    glColor3ub(189, 33, 0);
+    glVertex2f(-24.0f, -27.00f);
+    glVertex2f(-24.0f, -27.50f);
+    glEnd();
+
+
+
+
+
+
+
+    /**********************
+	* MD. TANJIMUL ISLAM
 	*  bus2 back bit font
 	***********************/
     glBegin(GL_QUADS);
@@ -760,6 +787,19 @@ glBegin(GL_QUADS);              // road component last 1
     glVertex2f(-23.0f, -28.0f);
     glVertex2f(-23.0f, -27.50f);
 	glVertex2f(-24.0f, -27.50f);
+	glEnd();
+
+
+	/**********************
+	* MD. TANJIMUL ISLAM
+	*  bus2 view glass
+	***********************/
+    glBegin(GL_QUADS);
+	glColor3ub(207, 207, 207); // yellow
+	glVertex2f(-23.5f, -27.0f);
+    glVertex2f(-24.0f, -27.0f);
+    glVertex2f(-24.0f, -24.5f);
+	glVertex2f(-23.5f, -24.5f);
 	glEnd();
 
 
@@ -781,17 +821,7 @@ glBegin(GL_QUADS);              // road component last 1
 
 
 
-    /**********************
-	* MD. TANJIMUL ISLAM
-	*  bus light
-	***********************/
-    glBegin(GL_QUADS);
-	glColor3ub(207, 207, 207); // yellow
-	glVertex2f(-23.5f, -27.0f);
-    glVertex2f(-24.0f, -27.0f);
-    glVertex2f(-24.0f, -24.5f);
-	glVertex2f(-23.5f, -24.5f);
-	glEnd();
+
 
 
 
@@ -1009,12 +1039,79 @@ glBegin(GL_QUADS);              // road component last 1
 
 
 
+     /**********************
+	* MD. TANJIMUL ISLAM
+	*  Bus2 tyre1
+	***********************/
+	glBegin(GL_TRIANGLE_FAN);
+	x=-20.5f; y=-27.8f; radius1=0.85f;
+		glColor3ub(42, 55, 74);
+		glVertex2f(x, y); // center of circle
+		for(q = 0; q <= triangleAmount1;q++) {
+			glVertex2f(
+		            x + (radius1 * cos(q *  twicePi1 / triangleAmount1)),
+			    y + (radius1 * sin(q * twicePi1 / triangleAmount1))
+			);
+		}
+	glEnd();
+
+
+	glBegin(GL_TRIANGLE_FAN);
+	x=-20.5f; y=-27.8f; radius1=0.45f;
+		glColor3ub(205, 204, 209);
+		glVertex2f(x, y); // center of circle
+		for(q = 0; q <= triangleAmount1;q++) {
+			glVertex2f(
+		            x + (radius1 * cos(q *  twicePi1 / triangleAmount1)),
+			    y + (radius1 * sin(q * twicePi1 / triangleAmount1))
+			);
+		}
+	glEnd();
 
 
 
 
 
-/*   Graph for better drawing
+
+    /**********************
+	* MD. TANJIMUL ISLAM
+	*  Bus2 tyre2
+	***********************/
+	glBegin(GL_TRIANGLE_FAN);
+	x=-12.0f; y=-27.8f; radius1=0.85f;
+		glColor3ub(42, 55, 74);
+		glVertex2f(x, y); // center of circle
+		for(q = 0; q <= triangleAmount1;q++) {
+			glVertex2f(
+		            x + (radius1 * cos(q *  twicePi1 / triangleAmount1)),
+			    y + (radius1 * sin(q * twicePi1 / triangleAmount1))
+			);
+		}
+	glEnd();
+
+
+
+	glBegin(GL_TRIANGLE_FAN);
+	x=-12.0f; y=-27.8f; radius1=0.45f;
+		glColor3ub(205, 204, 209);
+		glVertex2f(x, y); // center of circle
+		for(q = 0; q <= triangleAmount1;q++) {
+			glVertex2f(
+		            x + (radius1 * cos(q *  twicePi1 / triangleAmount1)),
+			    y + (radius1 * sin(q * twicePi1 / triangleAmount1))
+			);
+		}
+	glEnd();
+
+
+
+
+
+
+
+
+
+/*   Graph for better drawing */
 
 
 	glLineWidth(0.5);
@@ -1043,7 +1140,7 @@ glBegin(GL_QUADS);              // road component last 1
 	glEnd();
 
 
-    Graph for better grawing */
+    /*Graph for better grawing */
 
 
 
